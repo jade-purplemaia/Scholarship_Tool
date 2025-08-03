@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>Scholarship Dashboard</title>
+
+  <link rel="icon" type="image/png" href="browser.png">
+
   <style>
     * {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f9fc;
+
       display: flex;
       height: 100vh;
     }
     .sidebar {
       width: 220px;
-      background-color: #2c3e50;
+      background-color: #547699;
       color: white;
       padding: 20px;
+    }
+    
+    th {
+      background-color: #c5cae9;
     }
     .sidebar h2 {
       font-size: 24px;
@@ -77,7 +87,7 @@
       position: relative;
       display: inline-block;
       cursor: pointer;
-      color: seagreen;
+      color: blue;
       text-decoration: underline;
     }
 
@@ -94,11 +104,46 @@
       left: 0;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+    .logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .branding {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #a3b8cc;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
 
   </style>
 </head>
 <body>
   <div class="sidebar">
+
+<div class="branding">
+  <img src="logo.png" alt="Your Logo" class="logo">
+</div>
+
+
+
     <h2>Dashboard</h2>
     <a href="#" onclick="showSection('scholarshipSection')">Scholarships</a>
     <a href="#" onclick="showSection('terminologySection')">Terminology Help</a>
@@ -529,16 +574,16 @@
         <tbody id="expiredTable">
         </tbody>
       </table>
+    
     </div>
-
 
     <div id="terminologySection" class="section">
       <h1>Terminology Help</h1>
-      <p>Need help understanding scholarship terms? Here are some definitions to guide you!:</p>
+      <p>Need help understanding scholarship terms? Here are some definitions to guide you:</p>
       <h2>Basic Terms</h2>
       <ol>
         <li><strong>Cost of Attendance:</strong> Estimated cost to attend a college for <liv><strong>ONE</strong> academic year, encompassing tuition, fees, room and board, books, and other expenses</li>
-        <li><strong>Financial Aid Offer:</strong> Outlines the amount and breakdown of finacial aid being offered to the student. Details the specific financial aid (grants, scholarships, loans, etc.) that covers the cost of attendance. May also be refered as as "awards." </li>
+        <oi><strong>Financial Aid Offer:</strong> Outlines the amount and breakdown of finacial aid being offered to the student. Details the specific financial aid (grants, scholarships, loans, etc.) that covers the cost of attendance. May also be refered as as "awards." </li>
       </ol>
       <h3>So whats the big difference between the two?</h3>
       <p>The <u>Cost of Attendance</u> is the <u>total estimated yearly cost of college</u>, while a <strong>Financial Aid Offer</strong> shows the <strong>financial help a student is eligible for to cover those costs</strong></p>
@@ -557,34 +602,32 @@
           </span>
           </span> 
         starts accruing right away, even while you're in school or during deferment.</li>
-        <li><strong> Federal Direct Graduate PLUS Loan:</strong> Federal student loan available to <u>graduate and professional students</u> to help cover education-related expenses not met by other financial aid </li>
-        <li><strong> Federal Direct Parent PLUS Loan : </strong> Federal loans that parents of dependent undergraduate students can use to help pay for education expenses. Parents or Guardians must pass a credit check to qualify. </li>
-        <li><strong> Private Loan: </strong> Non-federal student loan offered by private lenders such as banks, credit unions, or online financial institutions to help students pay for college expenses that aren't covered by federal aid. </li>
-      </ol>
 
-      <h2>FAFSA + Scholarships</h2>
-      <ol>
-        <li><strong>FAFSA: </strong> Stands for the Free Application for Federal Student Aid. It’s a form that students in the United States fill out to apply for financial aid for college or graduate school. When you submit the FAFSA, you’re applying for Federal grants, Federal student loans, Federal work-study programs and some state and school-based aid. </li>
-        <li><strong>Federal Pell Grant: </strong> Need-based financial aid provided by the U.S. federal government to help undergraduate students pay for college. Unlike loans, Pell Grants do not need to be repaid (except in rare cases, like withdrawing from school early). <td><a href="https://studentaid.gov/">Student must fill out FAFSA </a></td></li>
-        <li><strong>Federal Work-Study (FWS): </strong> Provides funding for part-time jobs for undergraduate and graduate students with financial need. Unlike grants and loans, FWS is paid to students as they earn the funds by working. <td><a href="https://studentaid.gov/">Student must fill out FAFSA </a></td></li>
-        <li><strong>Grants & Scholarships:</strong> Aid that does NOT have to be repaid. They can be called grants, scholarships, tuition remissions, gift aid, or tuition waivers. Grants and scholarships are provided based on many different factors such as merit or need.</li>
-        <li><strong>Merit-Based Scholarships:</strong> Financial awards given to students based on their academic, athletic, artistic, or leadership achievements, rather than financial need. </li>
-        <li><strong>Need-Based Scholarships: </strong> Need-based scholarship is financial aid awarded to students based on their financial need. These scholarships help make college more affordable for students from low- to middle-income families. <td><a href="https://studentaid.gov/">Student must fill out FAFSA </a></td> </li>
-         
-
-  <script>
-    function toggleNote(element) {
-      const note = element.querySelector('.note-content');
-      note.style.display = note.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+<script>
+  function toggleNote(element) {
+    const note = element.querySelector('.note-content');
+    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
 
     </div>
 
     <div id="aboutSection" class="section">
       <h1>About</h1>
-      <p>This dashboard helps students explore scholarships easily. We update listings monthly and strive to include diverse and reputable opportunities for all students.</p>
+      <p class="tagline">Empowering students, one scholarship at a time.</p>
+
+      <p>Tired of digging through a million tabs trying to find scholarships that actually apply to you? </p>
+
+       <p> Yeah, same. That’s why this tool was built — by a college student, for college students — to make the scholarship hunt way easier.</p>
+
+      <p>We’re talking real scholarships, no weird scams, no endless forms — just one smart, student-friendly tool that helps you find money for school without losing your mind.
+
+      So grab a coffee (or energy drink), pop in your info, and let this tool do the hard work. </p>
+      <!-- <img src="myimage.jpg" alt="A picture of a cat"> -->
     </div>
+    <footer class="footer">
+      <p>&copy; 2025 Scholar Tool | Built for students, by students.</p>
+    </footer>
   </div>
 
 
@@ -603,7 +646,7 @@
     const tableBody = document.getElementById("scholarshipTable");
     const expiredBody = document.getElementById("expiredTable");
 
-    const TODAY = new Date("2025-07-01");
+    const TODAY = new Date("2025-08-02");
 
     function capitalize(word) {
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
